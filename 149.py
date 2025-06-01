@@ -10,9 +10,9 @@ class Solution(object):
             for j in range(i + 1, len(points)):
                 p2 = points[j]
                 if p2[0] == p1[0]:
-                    slope = float("inf")  # vertical line
+                    slope = float("inf")  
                 else:
                     slope = (p2[1] - p1[1]) / float(p2[0] - p1[0])
                 count[slope] += 1
-                res = max(res, count[slope] + 1)  # +1 to include the starting point
+                res = max(res, count[slope] + 1)  
         return res
